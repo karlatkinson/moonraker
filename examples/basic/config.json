@@ -5,6 +5,7 @@
   "resultsDir": "results",
   "reporter": "moonraker",
   "threads": 1,
+  "icinga": true,
 
   "testTimeout": 60000,
   "elementTimeout": 5000,

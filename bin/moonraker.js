@@ -1,10 +1,11 @@
 var config       = require('moonraker').config,
+    reporters    = require('moonraker').reporters,
     childProcess = require('child_process'),
     fs           = require('fs'),
     path         = require('path'),
     wrench       = require('wrench'),
-    builder      = require('../lib/reporter/builder'),
-    parser       = require('../lib/utils/feature-parser');
+    parser       = require('../lib/utils/feature-parser'),
+    reporters    = require('../lib/reporters');
 
 checkConfig();
 resetWorkSpace();
@@ -22,7 +23,7 @@ queues.forEach(function(queue, index) {
 });
 
 process.on('exit', function() {
-  if (config.reporter === 'moonraker') builder.createHtmlReport();
+  reporters.emit('exit');
   if (failed) process.exit(2);
 });
 
