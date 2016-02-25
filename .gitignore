@@ -2,7 +2,9 @@ node_modules
 results/*.html
 results/*.css
 results/screenshots/*.png
+examples/basic/results/
 bower_components
 .tmp
 .sass-cache
 .DS_Store
+npm-debug.log

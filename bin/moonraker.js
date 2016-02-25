@@ -4,7 +4,8 @@ var config       = require('moonraker').config,
     path         = require('path'),
     wrench       = require('wrench'),
     builder      = require('../lib/reporter/builder'),
-    parser       = require('../lib/utils/feature-parser');
+    parser       = require('../lib/utils/feature-parser'),
+    reporters    = require('../lib/reporters');
 
 checkConfig();
 resetWorkSpace();
@@ -12,6 +13,14 @@ resetWorkSpace();
 var features = parser.parseFeatures(config.featuresDir, config.tags, config.language);
 var queues   = createQueues(features, config.threads || 1);
 var failed   = false;
+
+config.reporters = ['console'];
+
+if(config.reporters) {
+  config.reporters.forEach(function (reporterConfig) {
+    reporters.register(reporterConfig);
+  });
+}
 
 queues.forEach(function(queue, index) {
   var thread = childProcess.fork('./node_modules/moonraker/lib/env/mocha', process.argv);
@@ -22,6 +31,7 @@ queues.forEach(function(queue, index) {
 });
 
 process.on('exit', function() {
+  reporters.emit('exit');
   if (config.reporter === 'moonraker') builder.createHtmlReport();
   if (failed) process.exit(2);
 });
