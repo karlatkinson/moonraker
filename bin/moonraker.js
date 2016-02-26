@@ -1,4 +1,5 @@
 var config       = require('moonraker').config,
+    reporters    = require('moonraker').reporters,
     childProcess = require('child_process'),
     fs           = require('fs'),
     path         = require('path'),
@@ -13,14 +14,6 @@ resetWorkSpace();
 var features = parser.parseFeatures(config.featuresDir, config.tags, config.language);
 var queues   = createQueues(features, config.threads || 1);
 var failed   = false;
-
-config.reporters = ['console'];
-
-if(config.reporters) {
-  config.reporters.forEach(function (reporterConfig) {
-    reporters.register(reporterConfig);
-  });
-}
 
 queues.forEach(function(queue, index) {
   var thread = childProcess.fork('./node_modules/moonraker/lib/env/mocha', process.argv);

@@ -4,6 +4,7 @@
   "stepsDir": "tests/steps",
   "resultsDir": "results",
   "reporter": "moonraker",
+  "reporters": ["console"],
   "threads": 1,
 
   "testTimeout": 60000,
