@@ -25,7 +25,6 @@ queues.forEach(function(queue, index) {
 
 process.on('exit', function() {
   reporters.emit('exit');
-  if (config.reporter === 'moonraker') builder.createHtmlReport();
   if (failed) process.exit(2);
 });
 
