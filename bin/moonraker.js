@@ -4,7 +4,6 @@ var config       = require('moonraker').config,
     fs           = require('fs'),
     path         = require('path'),
     wrench       = require('wrench'),
-    builder      = require('../lib/reporter/builder'),
     parser       = require('../lib/utils/feature-parser'),
     reporters    = require('../lib/reporters');
 

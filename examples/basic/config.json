@@ -4,8 +4,8 @@
   "stepsDir": "tests/steps",
   "resultsDir": "results",
   "reporter": "moonraker",
-  "reporters": ["console", "html"],
   "threads": 1,
+  "icinga": true,
 
   "testTimeout": 60000,
   "elementTimeout": 5000,
