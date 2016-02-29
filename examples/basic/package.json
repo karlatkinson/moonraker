@@ -1,10 +1,10 @@
 {
-    "name": "MyTests",
-    "version": "0.0.1",
-    "dependencies": {
-        "moonraker": "latest"
-    },
-    "scripts": {
-      "test": "node node_modules/moonraker/bin/moonraker.js"
-    }
+  "name": "MyTests",
+  "version": "0.0.1",
+  "dependencies": {
+    "moonraker": "latest"
+  },
+  "scripts": {
+    "test": "node node_modules/moonraker/bin/moonraker.js"
+  }
 }
