@@ -18,25 +18,25 @@
   },
   "main": "lib/moonraker.js",
   "dependencies": {
-    "chai": "1.10.0",
-    "coffee-script": "1.9.0",
-    "glob": "4.3.1",
-    "handlebars": "2.0.0",
+    "chai": "3.5.0",
+    "coffee-script": "1.11.1",
+    "glob": "7.1.1",
+    "handlebars": "4.0.5",
     "jquery": "~3.1.1",
-    "mocha": "2.1.0",
-    "nconf": "0.7.1",
-    "selenium-webdriver": "2.44.0",
-    "transliteration": "^0.1.1",
-    "wrench": "1.5.8",
-    "yadda": "0.11.5"
+    "mocha": "3.1.2",
+    "nconf": "0.8.4",
+    "selenium-webdriver": "2.53.3",
+    "transliteration": "^1.1.11",
+    "wrench": "1.5.9",
+    "yadda": "0.22.0"
   },
   "devDependencies": {
-    "bower": "~1.3.12",
+    "bower": "~1.7.9",
     "gulp": "^3.5.6",
-    "gulp-sass": "^0.7.1",
+    "gulp-sass": "^2.3.2",
     "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
+    "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.0",
-    "gulp-util": "^2.2.14"
+    "gulp-util": "^3.0.7"
   }
 }
