@@ -18,7 +18,7 @@
   },
   "main": "lib/moonraker.js",
   "dependencies": {
-    "chai": "1.10.0",
+    "chai": "3.5.0",
     "coffee-script": "1.9.0",
     "glob": "4.3.1",
     "handlebars": "2.0.0",
